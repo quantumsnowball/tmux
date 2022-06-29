@@ -65,3 +65,12 @@ bind e new-window -n "~/.config/tmux/tmux.conf.local" "EDITOR=\${EDITOR//mvim/vi
 # About
 
 The purpose of this modifications is to pack all tmux configs into one single public repository, such that when you need to quickly setup up a new machine, your can clone this repo to the config and apply all the awesome settings right away. Currently I use Oh-my-tmux, so I make this little hack to make it lives under its own directory, but in the future this may change.
+
+# Bug Reports
+
+Since 3.3a tmux should automatically source from both `~/.tmux.conf` and `~/.config/tmux/tmux.conf`. This new feature works on Manjaro Linux but failed to work in MacOS ARM in my other machine. My temperary work around is to create a symobolic link back to the home directory while waiting for the official bug fix.
+
+```
+ln -s ~/.config/tmux/tmux.conf ~/.tmux.conf
+```
+
