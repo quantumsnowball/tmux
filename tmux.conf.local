@@ -378,7 +378,6 @@ tmux_conf_copy_to_os_clipboard=true
 # remap prefix from 'C-b' to 'C-Space'
 unbind C-b
 # set-option -g prefix M-Space
-
 set-option -g prefix C-a
 set-option -g prefix2 M-Space
 
@@ -397,6 +396,7 @@ unbind %
 #bind -r J resize-pane -D 5   # 5 px bigger down
 #bind -r K resize-pane -U 5   # 5 px bigger up
 #bind -r L resize-pane -R 5   # 5 px bigger right
+bind -r -N "Zoom the active pane (replace Z)" m resize-pane -Z \; unbind z
 
 # Enable mouse mode (tmux 2.1 and above)
 set -g mouse on
