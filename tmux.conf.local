@@ -371,6 +371,9 @@ tmux_conf_copy_to_os_clipboard=true
 #####################
 ### my custom key ###
 #####################
+# higher repeat-time
+# # to enable hold to auto repeat, set system repeat time to be lower, e.g. 600 ms
+set -g repeat-time 1000
 # prefix key
 unbind C-b
 set-option -g prefix C-a
