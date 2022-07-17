@@ -392,7 +392,7 @@ bind \\ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 # zoom panes
 unbind z
-bind -r -N "Zoom the active pane (replace Z)" m resize-pane -Z 
+bind -N "Maximize active pane (replace z)" m resize-pane -Z 
 # remove vim-tmux-navigator overlapped (deplicated prefix + hjkl navigate panes)
 unbind h
 unbind j
@@ -400,6 +400,8 @@ unbind k
 unbind l
 # remove these prevent unintended swap panes
 unbind C-h
+unbind C-j
+unbind C-k
 unbind C-l
 # resize panes
 bind -r h resize-pane -L 2
