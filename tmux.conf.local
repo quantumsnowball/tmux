@@ -419,10 +419,10 @@ bind -n M-j previous-window
 bind -n M-k next-window
 bind -n M-l next-window
 # swap windows
-bind -n M-H swap-window -t -1 \; previous-window
-bind -n M-J swap-window -t -1 \; previous-window
-bind -n M-K swap-window -t +1 \; next-window
-bind -n M-L swap-window -t +1 \; next-window
+bind -n M-H swap-window -d -t -1
+bind -n M-J swap-window -d -t -1
+bind -n M-K swap-window -d -t +1
+bind -n M-L swap-window -d -t +1
 #####################
 #####################
 #####################
