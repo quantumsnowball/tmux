@@ -393,7 +393,9 @@ bind - split-window -v -c "#{pane_current_path}"
 # zoom panes
 unbind z
 bind -N "Maximize active pane (replace z)" m resize-pane -Z 
-bind -N "Maximize active pane (replace z)" C-m resize-pane -Z 
+bind -N "Maximize active pane (replace z)" C-m resize-pane -Z
+# enter copy mode
+bind Enter copy-mode
 # toggle between two windows
 bind \; last-window
 bind -n M-\; last-pane
