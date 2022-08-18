@@ -420,15 +420,11 @@ bind -r J swap-pane -D
 bind -r K swap-pane -U
 bind -r L swap-pane -U
 # switch windows
-bind -n M-h previous-window
 bind -n M-j previous-window
 bind -n M-k next-window
-bind -n M-l next-window
 # swap windows
-bind -n M-H swap-window -d -t -1
-bind -n M-J swap-window -d -t -1
-bind -n M-K swap-window -d -t +1
-bind -n M-L swap-window -d -t +1
+bind -n M-h swap-window -d -t -1
+bind -n M-l swap-window -d -t +1
 # select windows
 bind -n M-0 select-window -t :=0
 bind -n M-1 select-window -t :=1
