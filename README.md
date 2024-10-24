@@ -13,3 +13,16 @@ git clone https://github.com/quantumsnowball/tmux
 
 Restart tmux and the new configs should be sourced automatically.
 
+# Startup
+
+You can create a new or join an existing tmux session upon launch a terminal. Put the following command as terminal launch option:
+
+```
+bash -c "tmux attach -t 0 || tmux new -s 0"
+```
+Or like this if you use WSL2:
+
+```
+C:\Windows\system32\wsl.exe -d Arch --exec bash -c "tmux attach -t 0 || tmux new -s 0"
+```
+
