@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# NOTE:
+# from version 3.2 this script is not necessary
+# tmux search for ~/.config/tmux/ for config file
+ln -sf "$HOME/.config/tmux/tmux.conf" "$HOME/.tmux.conf"
+ls -l "$HOME/.tmux.conf"
