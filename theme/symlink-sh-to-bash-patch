@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+# link sh to bash
+sudo ln -sf /usr/bin/bash /usr/bin/sh
+
+# verify
+sudo ls -l /usr/bin/sh
