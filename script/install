@@ -1,0 +1,3 @@
+#!/bin/sh
+
+stow -d "$(dirname "$(realpath "$0")")/_" -t "$HOME/.local/bin" --verbose "$@" .

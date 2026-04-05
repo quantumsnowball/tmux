@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+last_session=$(tmux ls -F '#{session_created} #{session_name}' | sort | awk '{print $2}' | tail -n 1)
+if [[ "$(tmux display -p "#S")" != "$last_session" ]]; then
+    tmux switch-client -n
+fi
