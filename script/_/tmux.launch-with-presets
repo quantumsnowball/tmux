@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# List of sessions you want to guarantee exist
+PRESETS=("00 monitor" "10 config" "20 documentation" "main")
+
+# Loop through and create missing sessions in the background (-d)
+for s in "${PRESETS[@]}"; do
+    tmux has-session -t "$s" 2>/dev/null || tmux new-session -d -s "$s"
+done
+
+# Finally, attach to the first one or the last active one
+tmux attach-session -t "${PRESETS[3]}"
