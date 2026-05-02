@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # List of sessions you want to guarantee exist
-PRESETS=("00 monitor" "10 docs" "20 config" "main")
+PRESETS=("00 monitor" "10 config" "main")
 
 # Loop through and create missing sessions in the background (-d)
 for s in "${PRESETS[@]}"; do
