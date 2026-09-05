@@ -1,7 +1,0 @@
-#!/bin/sh
-
-
-first_session=$(tmux ls -F '#{session_name}' | sort | head -n 1)
-if [[ "$(tmux display -p "#S")" != "$first_session" ]]; then
-    tmux switch-client -p
-fi

@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+# Get all session names in tmux's natural order
+local raw_sessions="$(tmux list-sessions -F '#{session_name}')"
+local sessions=(${(f)raw_sessions})
+local current_session="$(tmux display-message -p '#S')"
+# If current session is NOT the last item in the array, switch to next
+if [[ "$current_session" != "${sessions[-1]}" ]]; then
+    tmux switch-client -n
+fi
